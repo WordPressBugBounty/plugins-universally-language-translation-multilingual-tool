@@ -4,7 +4,7 @@ Tags: translate, translation, multilingual, language switcher, multilingual seo
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -244,6 +244,13 @@ You can reach our support team through the [Universally dashboard](https://app.u
 7. Language switcher styling — Customize trigger and dropdown colors, borders, border radius, and flag style.
 
 == Changelog ==
+
+= 1.0.8 =
+* Improvement: A cleaner, full-screen experience when connecting your site to Universally.
+* Change: Browser auto-translation prevention is now off by default. You can turn it on anytime under Preferences, including a new option to also cover your original language.
+
+= 1.0.6.1 =
+* Fix: the plugin no longer triggers a fatal error when loaded under PHP older than 7.4 — for example a WP-CLI or cron process running an older PHP binary than the site itself. It now stops gracefully with an admin notice, and Composer's platform check no longer hard-fails the autoloader.
 
 = 1.0.6 =
 * New: Connect your site to Universally in one click. A guided setup saves your API key automatically — no manual copy-paste.

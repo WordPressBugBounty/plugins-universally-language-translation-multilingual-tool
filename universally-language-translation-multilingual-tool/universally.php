@@ -3,7 +3,7 @@
  * Plugin Name: Universally Language Translation Multilingual Tool
  * Plugin URI: https://universally.com
  * Description: Automatic website translation and localization for WordPress.
- * Version: 1.0.6
+ * Version: 1.0.8
  * Author: Syed Balkhi
  * Author URI: https://universally.com/
  * Text Domain: universally-language-translation-multilingual-tool
@@ -26,6 +26,24 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Hard requirement: PHP 7.4+. Bail BEFORE loading the Composer autoloader or any
+// of the typed app code below — both would fatal on older PHP. This matters even
+// when the site's web PHP is fine: a WP-CLI/cron process can run a different,
+// older PHP binary (e.g. the system default 7.2), which is where this otherwise
+// surfaces as an uncaught error. Fail gracefully with an admin notice instead.
+if (version_compare(PHP_VERSION, '7.4', '<')) {
+    add_action('admin_notices', function () {
+        echo '<div class="notice notice-error"><p>';
+        echo esc_html(sprintf(
+            /* translators: %s: the PHP version the site is currently running. */
+            __('Universally requires PHP 7.4 or higher. This site is running PHP %s. Please update PHP to use the plugin.', 'universally-language-translation-multilingual-tool'),
+            PHP_VERSION
+        ));
+        echo '</p></div>';
+    });
+    return;
+}
+
 // If the legacy plugin (universally/universally.php) was loaded earlier in the
 // same request, its classes already live in the Universally\ namespace.
 // Bail out now: re-running our bootstrap would either redeclare classes or
@@ -37,7 +55,7 @@ if (class_exists('Universally\\AdminBar', false)) {
 }
 
 const UNIVERSALLY_PLUGIN_FILE = __FILE__;
-const UNIVERSALLY_VERSION = '1.0.6';
+const UNIVERSALLY_VERSION = '1.0.8';
 const UNIVERSALLY_SETTINGS_KEY = 'universally_settings';
 
 register_activation_hook(__FILE__, function () {
