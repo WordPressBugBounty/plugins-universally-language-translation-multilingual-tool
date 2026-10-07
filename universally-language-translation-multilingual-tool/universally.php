@@ -3,7 +3,7 @@
  * Plugin Name: Universally Language Translation Multilingual Tool
  * Plugin URI: https://universally.com
  * Description: Automatic website translation and localization for WordPress.
- * Version: 1.0.9
+ * Version: 1.0.10
  * Author: Syed Balkhi
  * Author URI: https://universally.com/
  * Text Domain: universally-language-translation-multilingual-tool
@@ -16,6 +16,7 @@
 
 use Universally\ActivationToken;
 use Universally\AdminBar;
+use Universally\KeyStatus;
 use Universally\LanguageSwitcher;
 use Universally\Migration;
 use Universally\Onboarding;
@@ -55,7 +56,7 @@ if (class_exists('Universally\\AdminBar', false)) {
 }
 
 const UNIVERSALLY_PLUGIN_FILE = __FILE__;
-const UNIVERSALLY_VERSION = '1.0.9';
+const UNIVERSALLY_VERSION = '1.0.10';
 const UNIVERSALLY_SETTINGS_KEY = 'universally_settings';
 
 register_activation_hook(__FILE__, function () {
@@ -94,5 +95,6 @@ new UnifiedBuffer();
 new LanguageSwitcher();
 new AdminBar();
 new RestApi();
+KeyStatus::registerHooks();
 new ActivationToken();
 new Onboarding();

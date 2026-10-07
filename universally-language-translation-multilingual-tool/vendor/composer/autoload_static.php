@@ -28,6 +28,7 @@ class ComposerStaticInit91dd5751c17b0f9efaa062dd58a669d7
         'Universally\\Compat\\Manager' => __DIR__ . '/../..' . '/app/Compat/Manager.php',
         'Universally\\Compat\\WooCommerce' => __DIR__ . '/../..' . '/app/Compat/WooCommerce.php',
         'Universally\\Http' => __DIR__ . '/../..' . '/app/Http.php',
+        'Universally\\KeyStatus' => __DIR__ . '/../..' . '/app/KeyStatus.php',
         'Universally\\LanguageSwitcher' => __DIR__ . '/../..' . '/app/LanguageSwitcher.php',
         'Universally\\Log' => __DIR__ . '/../..' . '/app/Log.php',
         'Universally\\Migration' => __DIR__ . '/../..' . '/app/Migration.php',

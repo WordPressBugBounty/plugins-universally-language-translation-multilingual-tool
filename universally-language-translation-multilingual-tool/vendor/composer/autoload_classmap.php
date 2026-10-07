@@ -13,6 +13,7 @@ return array(
     'Universally\\Compat\\Manager' => $baseDir . '/app/Compat/Manager.php',
     'Universally\\Compat\\WooCommerce' => $baseDir . '/app/Compat/WooCommerce.php',
     'Universally\\Http' => $baseDir . '/app/Http.php',
+    'Universally\\KeyStatus' => $baseDir . '/app/KeyStatus.php',
     'Universally\\LanguageSwitcher' => $baseDir . '/app/LanguageSwitcher.php',
     'Universally\\Log' => $baseDir . '/app/Log.php',
     'Universally\\Migration' => $baseDir . '/app/Migration.php',

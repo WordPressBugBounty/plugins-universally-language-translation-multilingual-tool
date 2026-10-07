@@ -4,7 +4,7 @@ Tags: translate, translation, multilingual, language switcher, multilingual seo
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -244,6 +244,13 @@ You can reach our support team through the [Universally dashboard](https://app.u
 7. Language switcher styling — Customize trigger and dropdown colors, borders, border radius, and flag style.
 
 == Changelog ==
+
+= 1.0.10 =
+* New: A redesigned General tab that guides new sites through setup.
+* Improvement: A smoother connection flow, with a translated preview of your homepage during setup and clear steps to reconnect when the API key stops working.
+* Improvement: An easier way to add your first languages.
+* Fix: Several connection fixes, including the setup flow's close button returning you to the settings page and the Languages list updating right after you disconnect.
+* Fix: Welcome screen buttons no longer turn blue when clicked.
 
 = 1.0.9 =
 * New: An SEO setting under Preferences to choose your hreflang format — region codes (fr-FR, pt-BR) or language only (fr, pt). Pick language only if you keep one translation per language rather than one per country, so it reaches every speaker of that language. Region codes remain the default, so existing sites are unchanged.
