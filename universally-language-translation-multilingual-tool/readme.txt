@@ -4,7 +4,7 @@ Tags: translate, translation, multilingual, language switcher, multilingual seo
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -244,6 +244,9 @@ You can reach our support team through the [Universally dashboard](https://app.u
 7. Language switcher styling — Customize trigger and dropdown colors, borders, border radius, and flag style.
 
 == Changelog ==
+
+= 1.0.11 =
+* Fix: A damaged saved API key no longer crashes the whole site. The plugin now shows as disconnected so you can reconnect.
 
 = 1.0.10 =
 * New: A redesigned General tab that guides new sites through setup.
